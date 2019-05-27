@@ -48,7 +48,10 @@ static int sdp_set_cstate_pdu(sdp_buf_t *buf, sdp_cont_state_t *cstate)
        buf->data_size += length;
        return length;
 }
-extern "C" int LLVMFuzzerTestOneInput(const uint8_t *Data, size_t Size) {
+//extern "C" int LLVMFuzzerTestOneInput(const uint8_t *Data, size_t Size) {
+int main(){
+		uint8_t *Data = 0;
+		size_t Size = 0;
 
        sdp_buf_t* buf1;
        sdp_buf_t* buf2;
