@@ -1,16 +1,14 @@
+#pragma warning(disable:4996)
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#pragma warning(disable:4996)
 #include <stdint.h>
 #include <stddef.h>
-#include <stdio.h>
-//#include <unistd.h>
-#include <stdlib.h>
 #include <time.h>
-#include <string.h>
+//#include <unistd.h>
 
 void manageAccount();
+typedef enum { false, true } bool;
 
 typedef struct {
 	char accountnumber[10];
@@ -23,15 +21,12 @@ typedef struct {
 
 void sendToServer(Account* account, serverAccount* serverside) {
 	free(account);
-
 	serverside = malloc(256);
-
-	printf("주소값 %p", manageAccount);
+	//printf("주소값 %p", manageAccount);
+	printf("입력하신 계좌가 맞습니까? \n");
 	scanf("%128s", serverside->accountnumber);
-
-	printf("처리된 계좌는 다음과 같습니다. : ");
+	printf("처리된 계좌는 다음과 같습니다. : \n");
 	account->print(account);
-
 }
 
 void captchaFinalStage() {
@@ -56,31 +51,28 @@ void captchaFinalStage() {
 		printf("%d ", hashTable[i]);
 		if (i % 10 == 9)
 			printf("\n");
-
 	}
 }
 void captchaSecondStage() {
-
 	//int *account = (int*)(Data + 16);
 	//printf("\t\tarr3 : %d\n", *account);
-
 	int* captcha = malloc(sizeof(int));
-	printf("다음 보이는 숫자를 입력해주세요 : 5");
+	printf("다음 보이는 숫자를 입력해주세요 : 5 \n");
 	scanf("%d", captcha);
 	if (*captcha==5) {
 		captchaFinalStage();
 	}
 }
+
 void captchaFirstStage() {
 	//int *menu = (int*)(Data + 12);
 	//printf("\t\tarr2 : %d\n", *menu);
 	int* captcha = malloc(sizeof(int));
-	printf("다음 보이는 숫자를 입력해주세요 : 1234");
+	printf("다음 보이는 숫자를 입력해주세요 : 1234 \n");
 	scanf("%d", captcha);
 	if (*captcha ==1234) {
 		captchaSecondStage();
 	}
-
 }
 
 void printAccount(Account* account) {
@@ -103,8 +95,6 @@ void manageAccount(void) {//고객관리-관리자용함수
 		printf("%s", b);
 	}
 }
-
-typedef enum { false, true } bool;
 
 bool login(char* input_id, char* input_pw, char* compare_id, char* compare_pw, FILE* fd) {
 	char* pstr;
@@ -148,9 +138,7 @@ bool compare(char* input_account, char* compare_account, char* compare_accountpw
 }
 int main(void)
 {
-
 	FILE* fd = fopen("userInfo.txt", "r");
-
 	if (fd == NULL)
 	{
 		printf("유저정보 파일을 불러올 수 없습니다.");
@@ -164,9 +152,7 @@ int main(void)
 	char* compare_account = malloc(8);
 	char* input_accountpw = malloc(4);
 
-
-
-	printf("환영합니다! 원하시는 거래를 선택하세요. 1:송금하기 2:계정삭제");
+	printf("환영합니다! 원하시는 거래를 선택하세요. 1:송금하기 2:계정삭제 \n");
 	int dealnum;
 	scanf("%d", &dealnum);
 	if (dealnum == 1) {
@@ -175,25 +161,17 @@ int main(void)
 		printf("비밀번호를 입력해주세요.\n PW : ");
 		scanf("%s", input_pw);
 		if (login(input_id, input_pw, compare_id, compare_pw, fd)) {
-			printf("입금하실 계좌를 입력해주세요.");
+			printf("입금하실 계좌를 입력해주세요. : \n");
 			scanf("%s", input_account);
 			if (compare(input_account, compare_account, compare_accountpw, fd)) {
-
 				Account* account;
 				serverAccount* serverside = NULL;
-
 				account = malloc(256);
-
 				strcpy(account->accountnumber, compare_account);
-				printf("입력하신 계좌는 다음과 같습니다. : ");
+				printf("입력하신 계좌는 다음과 같습니다. : \n");
 				account->print = (void*)printAccount;
-
 				account->print(account);
-
-
-				
 				sendToServer(account, serverside);
-
 			}
 		}
 	}
@@ -205,7 +183,7 @@ int main(void)
 			//int* pw = (int*)(command + 8);
 			//printf("\tarr1 : %d\n", *arr1);
 			int* captcha = malloc(1);
-			printf("다음 보이는 숫자를 입력해주세요 : 999");
+			printf("다음 보이는 숫자를 입력해주세요 : 999 \n");
 			scanf("%d", captcha);
 			if (*captcha == 999) {
 				captchaFirstStage();
