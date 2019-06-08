@@ -1,0 +1,1178 @@
+{
+  "paragraphs": [
+    {
+      "text": "%pyspark\nsc",
+      "user": "anonymous",
+      "dateUpdated": "2019-06-08 20:40:37.494",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/python",
+        "editorHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "\u003cSparkContext master\u003dspark://master:7077 appName\u003dslave3-kisung\u003e\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1559668517920_-1881028735",
+      "id": "20190605-021517_1781291299",
+      "dateCreated": "2019-06-05 02:15:17.920",
+      "dateStarted": "2019-06-08 20:40:37.534",
+      "dateFinished": "2019-06-08 20:40:37.562",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%pyspark\ndfsql \u003d sqlContext.read.format(\"com.databricks.spark.csv\").option(\"inferschema\", \"true\").option(\"use_unicode\",\"True\").load(\"data/chicken/chicken_2013.csv\")\n",
+      "user": "anonymous",
+      "dateUpdated": "2019-06-08 20:40:37.632",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/python",
+        "editorHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": []
+      },
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            "http://127.0.0.1:4040/jobs/job?id\u003d139",
+            "http://127.0.0.1:4040/jobs/job?id\u003d140"
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "apps": [],
+      "jobName": "paragraph_1559669547433_-1695316260",
+      "id": "20190605-023227_2030560068",
+      "dateCreated": "2019-06-05 02:32:27.433",
+      "dateStarted": "2019-06-08 20:40:37.667",
+      "dateFinished": "2019-06-08 20:40:37.997",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%pyspark\ndfsql.printSchema()",
+      "user": "anonymous",
+      "dateUpdated": "2019-06-08 20:40:38.062",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/python",
+        "editorHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "root\n |-- _c0: string (nullable \u003d true)\n |-- _c1: string (nullable \u003d true)\n |-- _c2: string (nullable \u003d true)\n |-- _c3: string (nullable \u003d true)\n |-- _c4: string (nullable \u003d true)\n |-- _c5: string (nullable \u003d true)\n |-- _c6: string (nullable \u003d true)\n |-- _c7: integer (nullable \u003d true)\n\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1559670940042_-1976729562",
+      "id": "20190605-025540_899580841",
+      "dateCreated": "2019-06-05 02:55:40.042",
+      "dateStarted": "2019-06-08 20:40:38.079",
+      "dateFinished": "2019-06-08 20:40:38.086",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%pyspark\ndfsql.show()",
+      "user": "anonymous",
+      "dateUpdated": "2019-06-08 20:40:38.179",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/python",
+        "editorHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "+-----------+---+---+---+-----+----+---+---+\n|        _c0|_c1|_c2|_c3|  _c4| _c5|_c6|_c7|\n+-----------+---+---+---+-----+----+---+---+\n|2013년08월01일|  목|  남|10대|서울특별시| 강동구| 치킨| 45|\n|2013년08월01일|  목|  남|10대|서울특별시| 강북구| 치킨| 24|\n|2013년08월01일|  목|  남|10대|서울특별시| 강서구| 치킨| 89|\n|2013년08월01일|  목|  남|10대|서울특별시| 관악구| 치킨| 59|\n|2013년08월01일|  목|  남|10대|서울특별시| 광진구| 치킨| 46|\n|2013년08월01일|  목|  남|10대|서울특별시| 구로구| 치킨| 42|\n|2013년08월01일|  목|  남|10대|서울특별시| 금천구| 치킨| 31|\n|2013년08월01일|  목|  남|10대|서울특별시| 노원구| 치킨| 84|\n|2013년08월01일|  목|  남|10대|서울특별시| 도봉구| 치킨| 51|\n|2013년08월01일|  목|  남|10대|서울특별시|동대문구| 치킨| 43|\n|2013년08월01일|  목|  남|10대|서울특별시| 동작구| 치킨| 39|\n|2013년08월01일|  목|  남|10대|서울특별시| 마포구| 치킨| 42|\n|2013년08월01일|  목|  남|10대|서울특별시|서대문구| 치킨| 44|\n|2013년08월01일|  목|  남|10대|서울특별시| 서초구| 치킨| 55|\n|2013년08월01일|  목|  남|10대|서울특별시| 성동구| 치킨| 38|\n|2013년08월01일|  목|  남|10대|서울특별시| 성북구| 치킨| 47|\n|2013년08월01일|  목|  남|10대|서울특별시| 송파구| 치킨| 83|\n|2013년08월01일|  목|  남|10대|서울특별시| 양천구| 치킨| 56|\n|2013년08월01일|  목|  남|10대|서울특별시|영등포구| 치킨| 63|\n|2013년08월01일|  목|  남|10대|서울특별시| 용산구| 치킨| 31|\n+-----------+---+---+---+-----+----+---+---+\nonly showing top 20 rows\n\n"
+          }
+        ]
+      },
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            "http://127.0.0.1:4040/jobs/job?id\u003d141"
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "apps": [],
+      "jobName": "paragraph_1559670958192_-813479711",
+      "id": "20190605-025558_1010811016",
+      "dateCreated": "2019-06-05 02:55:58.192",
+      "dateStarted": "2019-06-08 20:40:38.222",
+      "dateFinished": "2019-06-08 20:40:38.450",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%pyspark\ndfsql.registerTempTable(\"practice\")",
+      "user": "anonymous",
+      "dateUpdated": "2019-06-08 20:40:38.515",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/python",
+        "editorHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": []
+      },
+      "apps": [],
+      "jobName": "paragraph_1559670978792_314600238",
+      "id": "20190605-025618_1068437017",
+      "dateCreated": "2019-06-05 02:56:18.792",
+      "dateStarted": "2019-06-08 20:40:38.538",
+      "dateFinished": "2019-06-08 20:40:38.601",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%pyspark\nimport pandas as pd",
+      "user": "anonymous",
+      "dateUpdated": "2019-06-08 20:40:38.639",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/python",
+        "editorHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": []
+      },
+      "apps": [],
+      "jobName": "paragraph_1559975129422_-530659536",
+      "id": "20190608-152529_1989607410",
+      "dateCreated": "2019-06-08 15:25:29.422",
+      "dateStarted": "2019-06-08 20:40:38.691",
+      "dateFinished": "2019-06-08 20:40:38.741",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%pyspark\nquery1\u003d\"select avg(_c7), sum(_c7) from practice group by _c5 \"",
+      "user": "anonymous",
+      "dateUpdated": "2019-06-08 20:53:35.548",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/python",
+        "editorHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": []
+      },
+      "apps": [],
+      "jobName": "paragraph_1559670995352_1291559930",
+      "id": "20190605-025635_1289983999",
+      "dateCreated": "2019-06-05 02:56:35.352",
+      "dateStarted": "2019-06-08 20:53:35.570",
+      "dateFinished": "2019-06-08 20:53:35.577",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%pyspark\nsqlContext.sql(query1).toPandas()[:5]",
+      "user": "anonymous",
+      "dateUpdated": "2019-06-08 20:53:38.419",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/python",
+        "editorHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "     avg(_c7)  sum(_c7)\n0  126.421053    230592\n1   56.346006    102268\n2   71.347993    129782\n3   77.892739    141609\n4   60.411277    109284\n"
+          }
+        ]
+      },
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            "http://127.0.0.1:4040/jobs/job?id\u003d165"
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "apps": [],
+      "jobName": "paragraph_1559671004532_-739448997",
+      "id": "20190605-025644_1047888071",
+      "dateCreated": "2019-06-05 02:56:44.533",
+      "dateStarted": "2019-06-08 20:53:38.459",
+      "dateFinished": "2019-06-08 20:53:39.399",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%pyspark\r\nregion\u003dz.select(\"region\", [(\"JR\",\"종로구\"),\r\n                    (\"JO\",\"중구\"),\r\n                     (\"YS\",\"용산구\"),\r\n                      (\"SD\",\"성동구\"),\r\n                       (\"GJ\",\"광진구\"),\r\n                        (\"DDM\",\"동대문구\"),\r\n                         (\"JY\",\"중랑구\"),\r\n                          (\"SB\",\"성북구\"),\r\n                           (\"GB\",\"강북구\"),\r\n                            (\"DB\",\"도봉구\"),\r\n                             (\"NW\",\"노원구\"),\r\n                             (\"EP\",\"은평구\"),\r\n                             (\"SDM\",\"서대문구\"),\r\n                             (\"MP\",\"마포구\"),\r\n                             (\"YC\",\"양천구\"),\r\n                             (\"GS\",\"강서구\"),\r\n                             (\"GR\",\"구로구\"),\r\n                             (\"YDP\",\"영등포구\"),\r\n                             (\"DJ\",\"동작구\"),\r\n                             (\"GA\",\"관악구\"),\r\n                              (\"SC\",\"서초구\"),\r\n                               (\"GN\",\"강남구\"),\r\n                                (\"SP\",\"송파구\"),\r\n                                 (\"GD\",\"강동구\"),])\r\nz.put(\"input_region\",region)",
+      "user": "anonymous",
+      "dateUpdated": "2019-06-08 20:40:40.403",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/python",
+        "runOnSelectionChange": true,
+        "editorHide": false
+      },
+      "settings": {
+        "params": {
+          "region": "YC"
+        },
+        "forms": {
+          "region": {
+            "type": "Select",
+            "options": [
+              {
+                "value": "JR",
+                "displayName": "종로구"
+              },
+              {
+                "value": "JO",
+                "displayName": "중구"
+              },
+              {
+                "value": "YS",
+                "displayName": "용산구"
+              },
+              {
+                "value": "SD",
+                "displayName": "성동구"
+              },
+              {
+                "value": "GJ",
+                "displayName": "광진구"
+              },
+              {
+                "value": "DDM",
+                "displayName": "동대문구"
+              },
+              {
+                "value": "JY",
+                "displayName": "중랑구"
+              },
+              {
+                "value": "SB",
+                "displayName": "성북구"
+              },
+              {
+                "value": "GB",
+                "displayName": "강북구"
+              },
+              {
+                "value": "DB",
+                "displayName": "도봉구"
+              },
+              {
+                "value": "NW",
+                "displayName": "노원구"
+              },
+              {
+                "value": "EP",
+                "displayName": "은평구"
+              },
+              {
+                "value": "SDM",
+                "displayName": "서대문구"
+              },
+              {
+                "value": "MP",
+                "displayName": "마포구"
+              },
+              {
+                "value": "YC",
+                "displayName": "양천구"
+              },
+              {
+                "value": "GS",
+                "displayName": "강서구"
+              },
+              {
+                "value": "GR",
+                "displayName": "구로구"
+              },
+              {
+                "value": "YDP",
+                "displayName": "영등포구"
+              },
+              {
+                "value": "DJ",
+                "displayName": "동작구"
+              },
+              {
+                "value": "GA",
+                "displayName": "관악구"
+              },
+              {
+                "value": "SC",
+                "displayName": "서초구"
+              },
+              {
+                "value": "GN",
+                "displayName": "강남구"
+              },
+              {
+                "value": "SP",
+                "displayName": "송파구"
+              },
+              {
+                "value": "GD",
+                "displayName": "강동구"
+              }
+            ],
+            "name": "region",
+            "displayName": "region",
+            "defaultValue": "",
+            "hidden": false
+          }
+        }
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": []
+      },
+      "apps": [],
+      "jobName": "paragraph_1559671011568_-1584694650",
+      "id": "20190605-025651_2022306660",
+      "dateCreated": "2019-06-05 02:56:51.568",
+      "dateStarted": "2019-06-08 20:40:40.460",
+      "dateFinished": "2019-06-08 20:40:40.663",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%pyspark\r\nstore_type\u003dz.select(\"store_type\", [(\"pizza\",\"pizza\"),\r\n                    (\"chicken\",\"chicken\"),\r\n                    (\"china\",\"chinese_food\"),\r\n                    ])\r\nz.put(\"input_store_type\",store_type)",
+      "user": "anonymous",
+      "dateUpdated": "2019-06-08 20:40:40.754",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/python",
+        "runOnSelectionChange": true,
+        "editorHide": false
+      },
+      "settings": {
+        "params": {
+          "store_type": "china",
+          "store_type2": ""
+        },
+        "forms": {
+          "store_type": {
+            "type": "Select",
+            "options": [
+              {
+                "value": "pizza",
+                "displayName": "pizza"
+              },
+              {
+                "value": "chicken",
+                "displayName": "chicken"
+              },
+              {
+                "value": "china",
+                "displayName": "chinese_food"
+              }
+            ],
+            "name": "store_type",
+            "displayName": "store_type",
+            "defaultValue": "",
+            "hidden": false
+          }
+        }
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": []
+      },
+      "apps": [],
+      "jobName": "paragraph_1559977277384_597254774",
+      "id": "20190608-160117_1179578678",
+      "dateCreated": "2019-06-08 16:01:17.384",
+      "dateStarted": "2019-06-08 20:40:40.780",
+      "dateFinished": "2019-06-08 20:40:40.826",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%pyspark\nstart_date\u003dz.textbox(\"start date: ex)20190101\")\nz.put(\"start date : ex)20190101\", start_date)\nend_date\u003dz.textbox(\"end date: ex)20191231\")\nz.put(\"end date : ex)20191231\", end_date)",
+      "user": "anonymous",
+      "dateUpdated": "2019-06-08 20:40:40.880",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/python",
+        "editorHide": false
+      },
+      "settings": {
+        "params": {
+          "start date": "133",
+          "start date : ex)20190101": "",
+          "start date: ex)20190101": "20190303",
+          "end date: ex)20191231": ""
+        },
+        "forms": {
+          "start date: ex)20190101": {
+            "type": "TextBox",
+            "name": "start date: ex)20190101",
+            "displayName": "start date: ex)20190101",
+            "defaultValue": "",
+            "hidden": false
+          },
+          "end date: ex)20191231": {
+            "type": "TextBox",
+            "name": "end date: ex)20191231",
+            "displayName": "end date: ex)20191231",
+            "defaultValue": "",
+            "hidden": false
+          }
+        }
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": []
+      },
+      "apps": [],
+      "jobName": "paragraph_1559977645408_2033283906",
+      "id": "20190608-160725_791263757",
+      "dateCreated": "2019-06-08 16:07:25.408",
+      "dateStarted": "2019-06-08 20:40:40.904",
+      "dateFinished": "2019-06-08 20:40:40.927",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%pyspark\r\nfrom pyspark.sql.functions import col\r\ndf_pizza_2015 \u003d sqlContext.read.format(\"com.databricks.spark.csv\").option(\"header\",\"false\").load(\"data/pizza/pizza_2015.csv\")\r\ndf_pizza_2016 \u003d sqlContext.read.format(\"com.databricks.spark.csv\").option(\"header\",\"false\").load(\"data/pizza/pizza_2016.csv\")\r\ndf_pizza_2017 \u003d sqlContext.read.format(\"com.databricks.spark.csv\").option(\"header\",\"false\").load(\"data/pizza/pizza_2017.csv\")\r\ndf_pizza_2018 \u003d sqlContext.read.format(\"com.databricks.spark.csv\").option(\"header\",\"false\").load(\"data/pizza/pizza_2018.csv\")\r\ndf_pizza_2019 \u003d sqlContext.read.format(\"com.databricks.spark.csv\").option(\"header\",\"false\").load(\"data/pizza/pizza_2019.csv\")\r\n\r\n\r\n\r\ndf_pizza_concat \u003d df_pizza_2015.union(df_pizza_2016)\r\ndf_pizza_concat\u003d df_pizza_concat.union(df_pizza_2017)\r\ndf_pizza_concat\u003d df_pizza_concat.union(df_pizza_2018)\r\ndf_pizza_concat\u003d df_pizza_concat.union(df_pizza_2019)\r\n\r\ndf_pizza_concat \u003d df_pizza_concat.select(col(\"_c0\").alias(\"Dates\"), col(\"_c1\").alias(\"Day\"),col(\"_c2\").alias(\"Gender\"),\r\n                  col(\"_c3\").alias(\"Age\"),col(\"_c4\").alias(\"Si\"), col(\"_c5\").alias(\"Gu\"),\r\n                   col(\"_c6\").alias(\"Store\"),col(\"_c7\").alias(\"Order\"))\r\n\r\ndf_pizza_concat \u003d df_pizza_concat.drop(\"Si\").drop(\"Store\")\r\n\r\ndf_pizza_concat.printSchema()",
+      "user": "anonymous",
+      "dateUpdated": "2019-06-08 20:40:41.002",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {
+          "1": {
+            "graph": {
+              "mode": "pieChart",
+              "height": 300.0,
+              "optionOpen": false,
+              "setting": {
+                "multiBarChart": {
+                  "rotate": {
+                    "degree": "-45"
+                  },
+                  "xLabelStatus": "default"
+                },
+                "stackedAreaChart": {
+                  "rotate": {
+                    "degree": "-45"
+                  },
+                  "xLabelStatus": "default"
+                },
+                "lineChart": {
+                  "rotate": {
+                    "degree": "-45"
+                  },
+                  "xLabelStatus": "default"
+                },
+                "zeppelin-number": {
+                  "chartChanged": true,
+                  "parameterChanged": false,
+                  "panel": {
+                    "columnPanelOpened": true,
+                    "parameterPanelOpened": false
+                  },
+                  "spec": {
+                    "charts": {
+                      "simple": {
+                        "transform": {
+                          "method": "raw"
+                        },
+                        "sharedAxis": false,
+                        "axis": {
+                          "main title": {
+                            "dimension": "single",
+                            "axisType": "key",
+                            "name": "main title"
+                          },
+                          "secondary title": {
+                            "dimension": "single",
+                            "axisType": "aggregator",
+                            "name": "secondary title"
+                          }
+                        },
+                        "parameter": {
+                          "fontColor": {
+                            "valueType": "string",
+                            "defaultValue": "black",
+                            "description": "font color",
+                            "name": "fontColor"
+                          },
+                          "fontSize": {
+                            "widget": "option",
+                            "valueType": "string",
+                            "defaultValue": "medium",
+                            "description": "font size",
+                            "optionValues": [
+                              "small",
+                              "medium",
+                              "large"
+                            ],
+                            "name": "fontSize"
+                          },
+                          "alignment": {
+                            "widget": "option",
+                            "valueType": "string",
+                            "defaultValue": "center",
+                            "description": "alignment",
+                            "optionValues": [
+                              "left",
+                              "right",
+                              "center"
+                            ],
+                            "name": "alignment"
+                          },
+                          "iconName": {
+                            "valueType": "string",
+                            "defaultValue": "",
+                            "description": "font awesome icon name. Ex: users",
+                            "name": "iconName"
+                          },
+                          "showTitle": {
+                            "widget": "checkbox",
+                            "valueType": "boolean",
+                            "defaultValue": true,
+                            "description": "show title",
+                            "name": "showTitle"
+                          },
+                          "prefix": {
+                            "valueType": "string",
+                            "defaultValue": "",
+                            "description": "prefix",
+                            "name": "prefix"
+                          },
+                          "suffix": {
+                            "valueType": "string",
+                            "defaultValue": "",
+                            "description": "suffix",
+                            "name": "suffix"
+                          }
+                        }
+                      }
+                    },
+                    "initialized": false,
+                    "version": {
+                      "axis": "{\"simple\":[{\"dimension\":\"single\",\"axisType\":\"key\",\"name\":\"main title\"},{\"dimension\":\"single\",\"axisType\":\"aggregator\",\"name\":\"secondary title\"}]}",
+                      "parameter": "{\"simple\":[{\"valueType\":\"string\",\"defaultValue\":\"black\",\"description\":\"font color\",\"name\":\"fontColor\"},{\"widget\":\"option\",\"valueType\":\"string\",\"defaultValue\":\"medium\",\"description\":\"font size\",\"optionValues\":[\"small\",\"medium\",\"large\"],\"name\":\"fontSize\"},{\"widget\":\"option\",\"valueType\":\"string\",\"defaultValue\":\"center\",\"description\":\"alignment\",\"optionValues\":[\"left\",\"right\",\"center\"],\"name\":\"alignment\"},{\"valueType\":\"string\",\"defaultValue\":\"\",\"description\":\"font awesome icon name. Ex: users\",\"name\":\"iconName\"},{\"widget\":\"checkbox\",\"valueType\":\"boolean\",\"defaultValue\":true,\"description\":\"show title\",\"name\":\"showTitle\"},{\"valueType\":\"string\",\"defaultValue\":\"\",\"description\":\"prefix\",\"name\":\"prefix\"},{\"valueType\":\"string\",\"defaultValue\":\"\",\"description\":\"suffix\",\"name\":\"suffix\"}]}"
+                    }
+                  },
+                  "chart": {
+                    "current": "simple",
+                    "available": [
+                      "simple"
+                    ]
+                  },
+                  "axis": {
+                    "simple": {}
+                  },
+                  "sharedAxis": {},
+                  "axisSpecs": {
+                    "simple": [
+                      {
+                        "dimension": "single",
+                        "axisType": "key",
+                        "name": "main title"
+                      },
+                      {
+                        "dimension": "single",
+                        "axisType": "aggregator",
+                        "name": "secondary title"
+                      }
+                    ]
+                  },
+                  "parameter": {
+                    "simple": {
+                      "fontColor": "black",
+                      "fontSize": "medium",
+                      "alignment": "center",
+                      "iconName": "",
+                      "showTitle": true,
+                      "prefix": "",
+                      "suffix": ""
+                    }
+                  },
+                  "paramSpecs": {
+                    "simple": [
+                      {
+                        "valueType": "string",
+                        "defaultValue": "black",
+                        "description": "font color",
+                        "name": "fontColor"
+                      },
+                      {
+                        "widget": "option",
+                        "valueType": "string",
+                        "defaultValue": "medium",
+                        "description": "font size",
+                        "optionValues": [
+                          "small",
+                          "medium",
+                          "large"
+                        ],
+                        "name": "fontSize"
+                      },
+                      {
+                        "widget": "option",
+                        "valueType": "string",
+                        "defaultValue": "center",
+                        "description": "alignment",
+                        "optionValues": [
+                          "left",
+                          "right",
+                          "center"
+                        ],
+                        "name": "alignment"
+                      },
+                      {
+                        "valueType": "string",
+                        "defaultValue": "",
+                        "description": "font awesome icon name. Ex: users",
+                        "name": "iconName"
+                      },
+                      {
+                        "widget": "checkbox",
+                        "valueType": "boolean",
+                        "defaultValue": true,
+                        "description": "show title",
+                        "name": "showTitle"
+                      },
+                      {
+                        "valueType": "string",
+                        "defaultValue": "",
+                        "description": "prefix",
+                        "name": "prefix"
+                      },
+                      {
+                        "valueType": "string",
+                        "defaultValue": "",
+                        "description": "suffix",
+                        "name": "suffix"
+                      }
+                    ]
+                  }
+                }
+              },
+              "commonSetting": {},
+              "keys": [
+                {
+                  "name": "id",
+                  "index": 0.0,
+                  "aggr": "sum"
+                }
+              ],
+              "groups": [],
+              "values": []
+            },
+            "helium": {}
+          }
+        },
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/python",
+        "editorHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "root\n |-- Dates: string (nullable \u003d true)\n |-- Day: string (nullable \u003d true)\n |-- Gender: string (nullable \u003d true)\n |-- Age: string (nullable \u003d true)\n |-- Gu: string (nullable \u003d true)\n |-- Order: string (nullable \u003d true)\n\n"
+          }
+        ]
+      },
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            "http://127.0.0.1:4040/jobs/job?id\u003d143",
+            "http://127.0.0.1:4040/jobs/job?id\u003d144",
+            "http://127.0.0.1:4040/jobs/job?id\u003d145",
+            "http://127.0.0.1:4040/jobs/job?id\u003d146",
+            "http://127.0.0.1:4040/jobs/job?id\u003d147"
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "apps": [],
+      "jobName": "paragraph_1559982733696_-1869422025",
+      "id": "20190608-173213_2027636972",
+      "dateCreated": "2019-06-08 17:32:13.696",
+      "dateStarted": "2019-06-08 20:40:41.027",
+      "dateFinished": "2019-06-08 20:40:42.093",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%pyspark\ndf_chicken_2013 \u003d sqlContext.read.format(\"com.databricks.spark.csv\").option(\"header\",\"false\").load(\"data/chicken/chicken_2013.csv\")\ndf_chicken_2014 \u003d sqlContext.read.format(\"com.databricks.spark.csv\").option(\"header\",\"false\").load(\"data/chicken/chicken_2014.csv\")\ndf_chicken_2015 \u003d sqlContext.read.format(\"com.databricks.spark.csv\").option(\"header\",\"false\").load(\"data/chicken/chicken_2015.csv\")\ndf_chicken_2016 \u003d sqlContext.read.format(\"com.databricks.spark.csv\").option(\"header\",\"false\").load(\"data/chicken/chicken_2016.csv\")\ndf_chicken_2017 \u003d sqlContext.read.format(\"com.databricks.spark.csv\").option(\"header\",\"false\").load(\"data/chicken/chicken_2017.csv\")\ndf_chicken_2017\u003ddf_chicken_2017.drop(\"_c6\")\ndf_chicken_2018 \u003d sqlContext.read.format(\"com.databricks.spark.csv\").option(\"header\",\"false\").load(\"data/chicken/chicken_2018.csv\")\ndf_chicken_2018\u003ddf_chicken_2018.drop(\"_c6\")\ndf_chicken_2019 \u003d sqlContext.read.format(\"com.databricks.spark.csv\").option(\"header\",\"false\").load(\"data/chicken/chicken_2019.csv\")\ndf_chicken_2019\u003ddf_chicken_2019.drop(\"_c6\")\n\n\ndf_chicken_concat \u003d df_chicken_2013.union(df_chicken_2014)\ndf_chicken_concat\u003d df_chicken_concat.union(df_chicken_2015)\ndf_chicken_concat\u003d df_chicken_concat.union(df_chicken_2016)\ndf_chicken_concat\u003d df_chicken_concat.union(df_chicken_2017)\ndf_chicken_concat\u003d df_chicken_concat.union(df_chicken_2018)\ndf_chicken_concat\u003d df_chicken_concat.union(df_chicken_2019)\n\ndf_chicken_concat \u003d df_chicken_concat.select(col(\"_c0\").alias(\"Dates\"), col(\"_c1\").alias(\"Day\"),col(\"_c2\").alias(\"Gender\"),\n                  col(\"_c3\").alias(\"Age\"),col(\"_c4\").alias(\"Si\"), col(\"_c5\").alias(\"Gu\"),\n                   col(\"_c6\").alias(\"Store\"),col(\"_c7\").alias(\"Order\"))\ndf_chicken_concat \u003d df_chicken_concat.drop(\"Si\").drop(\"Store\")\n\ndf_chicken_concat.printSchema()",
+      "user": "anonymous",
+      "dateUpdated": "2019-06-08 20:40:42.128",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/python"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "root\n |-- Dates: string (nullable \u003d true)\n |-- Day: string (nullable \u003d true)\n |-- Gender: string (nullable \u003d true)\n |-- Age: string (nullable \u003d true)\n |-- Gu: string (nullable \u003d true)\n |-- Order: string (nullable \u003d true)\n\n"
+          }
+        ]
+      },
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            "http://127.0.0.1:4040/jobs/job?id\u003d148",
+            "http://127.0.0.1:4040/jobs/job?id\u003d149",
+            "http://127.0.0.1:4040/jobs/job?id\u003d150",
+            "http://127.0.0.1:4040/jobs/job?id\u003d151",
+            "http://127.0.0.1:4040/jobs/job?id\u003d152",
+            "http://127.0.0.1:4040/jobs/job?id\u003d153",
+            "http://127.0.0.1:4040/jobs/job?id\u003d154"
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "apps": [],
+      "jobName": "paragraph_1559991041745_1985924756",
+      "id": "20190608-195041_1411252163",
+      "dateCreated": "2019-06-08 19:50:41.745",
+      "dateStarted": "2019-06-08 20:40:42.189",
+      "dateFinished": "2019-06-08 20:40:43.248",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%pyspark\ndf_china_2013 \u003d sqlContext.read.format(\"com.databricks.spark.csv\").option(\"header\",\"false\").load(\"data/china/china_2013.csv\")\ndf_china_2014 \u003d sqlContext.read.format(\"com.databricks.spark.csv\").option(\"header\",\"false\").load(\"data/china/china_2014.csv\")\ndf_china_2015 \u003d sqlContext.read.format(\"com.databricks.spark.csv\").option(\"header\",\"false\").load(\"data/china/china_2015.csv\")\ndf_china_2016 \u003d sqlContext.read.format(\"com.databricks.spark.csv\").option(\"header\",\"false\").load(\"data/china/china_2016.csv\")\ndf_china_2017 \u003d sqlContext.read.format(\"com.databricks.spark.csv\").option(\"header\",\"false\").load(\"data/china/china_2017.csv\")\ndf_china_2017 \u003d df_china_2017.drop(\"_c6\")\ndf_china_2018 \u003d sqlContext.read.format(\"com.databricks.spark.csv\").option(\"header\",\"false\").load(\"data/china/china_2018.csv\")\ndf_china_2018 \u003d df_china_2018.drop(\"_c6\")\ndf_china_2019 \u003d sqlContext.read.format(\"com.databricks.spark.csv\").option(\"header\",\"false\").load(\"data/china/china_2019.csv\")\ndf_china_2019 \u003d df_china_2019.drop(\"_c6\")\n\n\n\ndf_china_concat \u003d df_china_2013.union(df_china_2014)\ndf_china_concat\u003d df_china_concat.union(df_china_2015)\ndf_china_concat\u003d df_china_concat.union(df_china_2016)\ndf_china_concat\u003d df_china_concat.union(df_china_2017)\ndf_china_concat\u003d df_china_concat.union(df_china_2018)\ndf_china_concat\u003d df_china_concat.union(df_china_2019)\n\ndf_china_concat \u003d df_china_concat.select(col(\"_c0\").alias(\"Dates\"), col(\"_c1\").alias(\"Day\"),col(\"_c2\").alias(\"Gender\"),\n                  col(\"_c3\").alias(\"Age\"),col(\"_c4\").alias(\"Si\"), col(\"_c5\").alias(\"Gu\"),\n                   col(\"_c6\").alias(\"Store\"),col(\"_c7\").alias(\"Order\"))\ndf_china_concat \u003d df_china_concat.drop(\"Si\").drop(\"Store\")\ndf_china_concat.printSchema()",
+      "user": "anonymous",
+      "dateUpdated": "2019-06-08 20:40:43.288",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/python"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "root\n |-- Dates: string (nullable \u003d true)\n |-- Day: string (nullable \u003d true)\n |-- Gender: string (nullable \u003d true)\n |-- Age: string (nullable \u003d true)\n |-- Gu: string (nullable \u003d true)\n |-- Order: string (nullable \u003d true)\n\n"
+          }
+        ]
+      },
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            "http://127.0.0.1:4040/jobs/job?id\u003d155",
+            "http://127.0.0.1:4040/jobs/job?id\u003d156",
+            "http://127.0.0.1:4040/jobs/job?id\u003d157",
+            "http://127.0.0.1:4040/jobs/job?id\u003d158",
+            "http://127.0.0.1:4040/jobs/job?id\u003d159",
+            "http://127.0.0.1:4040/jobs/job?id\u003d160",
+            "http://127.0.0.1:4040/jobs/job?id\u003d161"
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "apps": [],
+      "jobName": "paragraph_1559991043283_-896521295",
+      "id": "20190608-195043_460984412",
+      "dateCreated": "2019-06-08 19:50:43.283",
+      "dateStarted": "2019-06-08 20:40:43.325",
+      "dateFinished": "2019-06-08 20:40:44.419",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%pyspark\nselect_region\u003dz.get(\"input_region\")\nstr(select_region)\nselect_store\u003dz.get(\"input_store_type\")\nselect_start_date\u003dz.get(\"start date: ex)20190101\")\nselect_end_date\u003dz.get(\"end date: ex)20191231\")\n\n",
+      "user": "anonymous",
+      "dateUpdated": "2019-06-08 20:48:45.468",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/python",
+        "editorHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "+--------+---+------+-----+---+-----+\n|   Dates|Day|Gender|  Age| Gu|Order|\n+--------+---+------+-----+---+-----+\n|20150701|  수|     남|60대이상|강남구|    5|\n|20150701|  수|     남|  30대|강남구|    5|\n|20150701|  수|     남|  20대|강남구|    5|\n|20150701|  수|     남|  20대|강남구|    5|\n|20150701|  수|     남|  50대|강남구|    5|\n|20150701|  수|     남|  20대|강남구|    5|\n|20150701|  수|     남|  20대|강남구|    5|\n|20150701|  수|     남|  50대|강남구|    5|\n|20150701|  수|     남|  20대|강남구|    6|\n|20150701|  수|     남|  50대|강남구|    5|\n+--------+---+------+-----+---+-----+\nonly showing top 10 rows\n\n"
+          }
+        ]
+      },
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            "http://127.0.0.1:4040/jobs/job?id\u003d164"
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "apps": [],
+      "jobName": "paragraph_1559993759929_296259477",
+      "id": "20190608-203559_83025592",
+      "dateCreated": "2019-06-08 20:35:59.929",
+      "dateStarted": "2019-06-08 20:45:11.591",
+      "dateFinished": "2019-06-08 20:45:12.355",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%pyspark\nselect_region\nstr(select_region)",
+      "user": "anonymous",
+      "dateUpdated": "2019-06-08 20:45:27.896",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/python",
+        "editorHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "\u0027YC\u0027\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1559990566533_-689379922",
+      "id": "20190608-194246_393762064",
+      "dateCreated": "2019-06-08 19:42:46.533",
+      "dateStarted": "2019-06-08 20:45:27.916",
+      "dateFinished": "2019-06-08 20:45:27.924",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%pyspark\ndf_pizza_concat.registerTempTable(\"dpc\")\nquery\u003d\"select Day from dpc \"\nsqlContext.sql(query).toPandas()[:5]",
+      "user": "anonymous",
+      "dateUpdated": "2019-06-08 20:54:37.170",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/python"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "  Day\n0   수\n1   수\n2   수\n3   수\n4   수\n"
+          }
+        ]
+      },
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            "http://127.0.0.1:4040/jobs/job?id\u003d166"
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "apps": [],
+      "jobName": "paragraph_1559994255953_1106964573",
+      "id": "20190608-204415_758675506",
+      "dateCreated": "2019-06-08 20:44:15.954",
+      "dateStarted": "2019-06-08 20:54:37.193",
+      "dateFinished": "2019-06-08 20:54:51.709",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%sql\nquery",
+      "user": "anonymous",
+      "dateUpdated": "2019-06-08 20:55:03.135",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "sql",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/sql"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1559994877170_41668558",
+      "id": "20190608-205437_1143226114",
+      "dateCreated": "2019-06-08 20:54:37.170",
+      "status": "READY",
+      "progressUpdateIntervalMs": 500
+    }
+  ],
+  "name": "Kisung",
+  "id": "2EFGRHHP4",
+  "noteParams": {},
+  "noteForms": {},
+  "angularObjects": {
+    "spark:shared_process": []
+  },
+  "config": {
+    "isZeppelinNotebookCronEnable": false
+  },
+  "info": {}
+}
