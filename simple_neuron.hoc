@@ -1,0 +1,10 @@
+load_file("nrngui.hoc")
+create soma
+
+soma {
+nseg=1
+diam=18.8
+L=18.8
+cm=1.0
+Ra=123.0
+}
